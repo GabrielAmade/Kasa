@@ -1,0 +1,10 @@
+.container {
+    background-color: #F6F6F6;
+    min-height: 50vh;
+    max-width: 90vw;
+    margin: 30px auto;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
