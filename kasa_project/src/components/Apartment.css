@@ -1,16 +1,30 @@
 .apartment {
     background-image: linear-gradient(360deg, #863535, #ff6060);
     border-radius: 10px;
-    min-width: 200px;
+    min-width: 340px;
+    min-height: 340px;
     padding: 0.2rem;
-    margin: 0.2rem;
+    margin: 0.8rem;
     display: flex;
     align-items: flex-end;
     color: white;
 }
 
 .apartment > p {
-    width: 50%;
+    width: 40%;
     margin: 10px;
     font-size: 18px;
+}
+
+
+@media (max-width: 768px) {
+
+    .apartment {
+        min-width: 100%;
+        margin: 10px 0px;
+    }
+
+    .apartment > p {
+        margin: 15px;
+    }
 }

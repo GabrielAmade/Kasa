@@ -1,0 +1,14 @@
+.footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer > div:first-child {
+    margin-bottom: 40px;
+}

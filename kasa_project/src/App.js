@@ -3,6 +3,8 @@ import "../src/App.css"
 import Navbar from './components/Navbar'
 import Banner from './components/Banner'
 import ApartmentList from './components/ApartmentList'
+import Footer from './components/Footer'
+
 
 function App() {
   return (
@@ -10,6 +12,7 @@ function App() {
       <Navbar />
       <Banner />
       <ApartmentList/>
+      <Footer />
     </div>
   )
 }
