@@ -6,19 +6,39 @@ import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,
   RouterProvider,
+  Outlet
 } from "react-router-dom";
+import Navbar from './components/Navbar';
+import Footer from './components/Footer'
 
+const HeaderFooterLayout = ()=> {
+  return <>
+    <Navbar />,
+    <Outlet />
+    <Footer />
+  </>
+}
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <App />
-    ,
+    errorElement: <h1>404 : Page not found</h1>,
+    element: <HeaderFooterLayout />,
+    children: [
+      {
+        path: "/",
+        element: <App />,
+      },
+      {
+        path: "/apartment",
+        element: <h1>Nos appartements</h1>
+      },
+      {
+        path: "/about",
+        element: <h1>À propos</h1>
+      },
+    ]
   },
-  {
-    path: "/hello",
-    element: <div>Hello</div>
-  }
+  
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

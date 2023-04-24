@@ -1,7 +1,5 @@
 .banner {
     max-width: 90vw;
-    padding: 0 2rem;
-    margin-bottom: 2rem;
     background-image: url("https://unsplash.it/800/200");
     background-size: cover;
     min-height: 223px;
@@ -22,20 +20,24 @@
 
 @media (max-width: 1023px) {
     .banner {
-        max-width: 83vw;
         min-height: 111px;
-        justify-content: flex-start;
+        margin: 20px auto;
     }
 
     .banner > h2 {
         font-size: 24px;
-        width: 80%;
     }
 }
 
 @media (max-width: 767px) {
     .banner {
-        max-width: 70vw;
+        justify-content: flex-start;
+    }
+
+    .banner > h2 {
+        font-size: 20px;
+        padding-left: 30px;
+        width: 185px;
     }
 
 }

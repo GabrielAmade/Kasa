@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom"
 import "./Navbar.css"
 
 export default function Navbar(){
@@ -8,8 +9,12 @@ export default function Navbar(){
                 <img src="logo.png" alt="logo"/>
             </div>
             <div className="navbar_menu">
-                <p>Accueil</p>
-                <p>À propos</p>
+                <Link to="/">
+                    <p>Accueil</p>
+                </Link>
+                <Link to="/about">
+                    <p>À propos</p>
+                </Link>
             </div>
         </nav>
     )

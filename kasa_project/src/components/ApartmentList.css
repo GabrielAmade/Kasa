@@ -3,7 +3,7 @@
     min-height: 50vh;
     max-width: 90vw;
     margin: 30px auto;
-    padding: 2rem;
+    /* padding: 2rem; */
     border-radius: 48px;
     display: flex;
     flex-wrap: wrap;
@@ -15,6 +15,6 @@
         justify-content: center;
         background-color: white;
         max-width: 90vw;
-        margin: 0 auto;
+        margin: 0 auto 20px;
     }
 }
