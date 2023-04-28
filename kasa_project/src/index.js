@@ -8,12 +8,14 @@ import {
   RouterProvider,
   Outlet
 } from "react-router-dom";
-import Navbar from './components/Navbar';
-import Footer from './components/Footer'
+import Navbar from './components/navbar/Navbar';
+import Footer from './components/footer/Footer'
+import ApartmentPage from './components/apartment_page/ApartmentPage';
+import ErrorPage from './components/error_page/ErrorPage';
 
 const HeaderFooterLayout = ()=> {
   return <>
-    <Navbar />,
+    <Navbar />
     <Outlet />
     <Footer />
   </>
@@ -21,7 +23,7 @@ const HeaderFooterLayout = ()=> {
 
 const router = createBrowserRouter([
   {
-    errorElement: <h1>404 : Page not found</h1>,
+    errorElement: <ErrorPage/>,
     element: <HeaderFooterLayout />,
     children: [
       {
@@ -30,7 +32,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/apartment",
-        element: <h1>Nos appartements</h1>
+        element: <ApartmentPage />
       },
       {
         path: "/about",

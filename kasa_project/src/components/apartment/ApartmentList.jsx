@@ -9,6 +9,8 @@ function ApartmentList() {
       <Apartment />
       <Apartment />
       <Apartment />
+      <Apartment />
+      <Apartment />
       
     </div>
   )

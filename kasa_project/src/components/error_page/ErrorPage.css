@@ -1,0 +1,21 @@
+.errorPage {
+    color: #ff6060;   
+    text-align: center;
+}
+
+.errorPage h1 {
+    font-size: 288px;
+    margin: 45px 0 10px;
+}
+
+.errorPage h2 {
+    font-size: 36px;
+    margin-bottom: 150px;
+}
+
+
+.linkHome {
+    color: #ff6060; 
+    text-decoration: none;
+}
+
