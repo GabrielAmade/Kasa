@@ -1,0 +1,122 @@
+.apartment_infos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.apartment_owner_details {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.apartment_owner_name {
+    display: flex;
+    flex-direction: column;
+}
+
+.apartment_owner_name > h3 {
+    margin: 2px 10px;
+    text-align: right;
+}
+
+.apartment_owner_badge {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #C4C4C4;
+    
+}
+
+.apartment_owner_stars {
+    font-size: 2rem;
+}
+
+.apartment_owner_stars > span {
+    margin-left: 15px;
+}
+
+.apartment_owner_stars > .active {
+    color: #ff6060;
+}
+
+.apartment_owner_stars > .inactive {
+    color: #C4C4C4;
+}
+
+
+.apartment_page h1 {
+    font-weight: 400px;
+}
+
+.apartment_page h2 {
+    font-weight: 400px;
+    font-size: 18px;
+}
+
+.apartment_filter {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.apartment_filter > p{
+    font-size: 14px;
+    background-color: #ff6060;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 3px;
+    margin-right: .5em;
+    width: 100px;
+}
+
+
+
+@media (max-width: 768px) {
+    .apartment_infos {
+        flex-direction: column;
+    }
+
+    .apartment_page h1 {
+        font-size: 18px;
+    }
+
+    .apartment_page h2 {
+        font-size: 14px;
+    }
+
+    .apartment_owner {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .apartment_owner_stars {
+        font-size: 1rem;
+    }
+
+    .apartment_owner_stars > span {
+        margin-left: 5px;
+    }
+
+    .apartment_owner_name > h3 {
+        font-size: 12px;
+    }
+
+    .apartment_owner_badge {
+        width: 32px;
+        height: 32px;
+    }
+
+    .apartment_filter {
+        margin-bottom: 0;
+    }
+
+    .apartment_filter > p{
+        font-size: 10px;
+        padding: 3px;
+        margin-right: .4em;
+        width: 60px;
+    }
+}

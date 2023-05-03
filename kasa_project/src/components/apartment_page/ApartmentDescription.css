@@ -1,0 +1,47 @@
+.apartmentDescrptionBlock {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 30px;
+}
+
+.description > p{
+    margin: 0 0 1rem;
+}
+
+.description_title {
+    background-color: #ff6060;
+    color: white;
+    padding-inline: 25px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chevron {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.description_text {
+    background-color: #F6F6F6;
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
+    position: relative;
+    top: -7px;
+    z-index: -1;
+}
+
+
+@media (max-width: 768px) {
+    .apartmentDescrptionBlock {
+        flex-direction: column;
+        gap: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .description > p{
+        font-size: 12px;
+        line-height: 20px;
+    }
+}

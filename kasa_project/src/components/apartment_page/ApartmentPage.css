@@ -1,47 +1,9 @@
 .apartment_page {
     color: #ff6060;
-    width: 90vw;
-    margin: 0 auto;  
-}
-
-.apartment_img > img {
-    width: 100%;
-}
-
-.apartment_infos {
-    display: flex;
-    justify-content: space-between;
-}
-
-.apartment_owner_badge {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    background: #C4C4C4;
-    
+    /* width: 90vw;
+    margin: 0 auto;   */
 }
 
 
-.apartment_page h1 {
-    font-weight: 400px;
-}
 
-.apartment_page h2 {
-    font-weight: 400px;
-    font-size: 18px;
-}
 
-.apartment_filter {
-    display: flex;
-}
-
-.apartment_filter > p{
-    font-size: 14px;
-    background-color: #ff6060;
-    color: white;
-    text-align: center;
-    border-radius: 10px;
-    padding: 3px;
-    margin-right: .5em;
-    width: 100px;
-}

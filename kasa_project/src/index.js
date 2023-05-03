@@ -12,6 +12,7 @@ import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer'
 import ApartmentPage from './components/apartment_page/ApartmentPage';
 import ErrorPage from './components/error_page/ErrorPage';
+import About from './components/about/About'
 
 const HeaderFooterLayout = ()=> {
   return <>
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <h1>À propos</h1>
+        element: <About />
       },
     ]
   },

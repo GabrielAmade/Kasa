@@ -1,0 +1,11 @@
+.apartment_img > img {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .apartment_img > img {
+        height: 70vh;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+}
