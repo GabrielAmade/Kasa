@@ -1,7 +1,7 @@
 import React from 'react'
-import "./ApartmentDescription.css"
+import "./DescriptionContainer.css"
 
-function ApartmentDescription() {
+function DescriptionContainer() {
   return (
     <div className='description'>
         <div className='description_title'>
@@ -13,4 +13,4 @@ function ApartmentDescription() {
   )
 }
 
-export default ApartmentDescription
+export default DescriptionContainer

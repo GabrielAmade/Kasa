@@ -1,19 +1,35 @@
-import React from 'react'
-import "./ApartmentList.css"
-import Apartment from "./Apartment.jsx"
+import React, { useEffect, useState } from 'react';
+import './ApartmentList.css';
+import ApartmentCard from './ApartmentCard.jsx';
 
 function ApartmentList() {
+  const [apartments, setApartments] = useState([]);
+
+  useEffect(() => {
+    async function fetchApartments() {
+      try {
+        const response = await fetch('data_base.json');
+        const data = await response.json();
+        setApartments(data);
+        console.log(data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    fetchApartments();
+  }, []);
+
   return (
     <div className='container'>
-      <Apartment />
-      <Apartment />
-      <Apartment />
-      <Apartment />
-      <Apartment />
-      <Apartment />
-      
+      {apartments.map((apartment) => (
+        <ApartmentCard title={apartment.title} imageUrl={apartment.cover}/>
+      ))}
+
+    
+
     </div>
-  )
+  );
 }
 
-export default ApartmentList
+export default ApartmentList;

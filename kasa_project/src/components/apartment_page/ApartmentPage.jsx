@@ -1,5 +1,5 @@
 import React from 'react'
-import ApartmentDescription from './ApartmentDescription'
+import DescriptionContainer from './DescriptionContainer'
 import "./ApartmentPage.css"
 import ApartmentBanner from './ApartmentBanner'
 import ApartmentInfos from './ApartmentInfos'
@@ -10,8 +10,8 @@ function ApartmentPage() {
         <ApartmentBanner />
         <ApartmentInfos />
         <div className='apartment_description_block'>
-            <ApartmentDescription/>
-            <ApartmentDescription/>
+            <DescriptionContainer/>
+            <DescriptionContainer/>
         </div>
 
     </div>

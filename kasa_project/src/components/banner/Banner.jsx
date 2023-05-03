@@ -4,7 +4,7 @@ import "./Banner.css"
 export default function Banner(){
     return (
         <div className="banner">
-            <h2 class="banner-header">Chez vous, partout et ailleurs</h2>
+            <h2 className="banner-header">Chez vous, partout et ailleurs</h2>
         </div>
     )
 }

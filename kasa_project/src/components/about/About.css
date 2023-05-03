@@ -1,3 +1,10 @@
 .about_container {
     padding: 0 4rem;
 }
+
+
+@media (max-width: 767px) {
+    .about_container {
+        padding: 0;
+    }
+}

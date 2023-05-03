@@ -4,8 +4,12 @@
     margin-bottom: 30px;
 }
 
+.description {
+    margin-block: 20px;
+}
+
 .description > p{
-    margin: 0 0 1rem;
+    margin: 0;
 }
 
 .description_title {

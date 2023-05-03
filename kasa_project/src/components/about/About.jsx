@@ -1,16 +1,16 @@
 import React from 'react'
-import ApartmentDescription from '../apartment_page/ApartmentDescription'
-import Banner from "../banner/Banner"
+import DescriptionContainer from '../apartment_page/DescriptionContainer'
 import "./About.css"
+import Banner from '../banner/Banner'
 
 function About() {
   return (
     <div>
       <Banner />
       <div className="about_container">
-        <ApartmentDescription/>
-        <ApartmentDescription/>
-        <ApartmentDescription/>
+        <DescriptionContainer/>
+        <DescriptionContainer/>
+        <DescriptionContainer/>
       </div>
     </div>
   )
