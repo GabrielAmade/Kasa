@@ -14,6 +14,7 @@
     object-fit: cover;
     width: 100%;
     height: 100%;
+    filter: brightness(0.9);
 }
 
 .apartment_card > a {
@@ -29,7 +30,7 @@
 
 
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
     .apartment_card {
         min-width: 100%;

@@ -23,7 +23,7 @@ function ApartmentList() {
   return (
     <div className='container'>
       {apartments.map((apartment) => (
-        <ApartmentCard title={apartment.title} imageUrl={apartment.cover}/>
+        <ApartmentCard key={apartment.id} title={apartment.title} imageUrl={apartment.cover} id={apartment.id}/>
       ))}
 
     

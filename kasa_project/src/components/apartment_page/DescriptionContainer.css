@@ -1,15 +1,29 @@
-.apartmentDescrptionBlock {
-    display: flex;
-    gap: 3rem;
-    margin-bottom: 30px;
-}
-
 .description {
     margin-block: 20px;
+    margin-inline: 10px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.description_content {
+    background-color: #F6F6F6;
+    border-radius: 0 0 10px 10px;
+    position: relative;
+    top: -15px;
+    z-index: -1;
+    animation: slide-in 0.3s ease-in-out;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateY(-100%);
+    }
+    
 }
 
 .description > p{
     margin: 0;
+    padding: 30px 20px;
 }
 
 .description_title {
@@ -27,14 +41,7 @@
     cursor: pointer;
 }
 
-.description_text {
-    background-color: #F6F6F6;
-    padding: 1rem;
-    border-radius: 0 0 10px 10px;
-    position: relative;
-    top: -7px;
-    z-index: -1;
-}
+
 
 
 @media (max-width: 768px) {
