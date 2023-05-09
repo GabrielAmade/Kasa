@@ -1,12 +1,16 @@
 .apartment_page {
     color: #ff6060;
-    /* width: 90vw;
-    margin: 0 auto;   */
+    width: 90vw;
+    margin: 0 auto;   
+   
 }
 
-
 .apartment_description_block {
+    width: 100%;
     display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+
 }
 
 

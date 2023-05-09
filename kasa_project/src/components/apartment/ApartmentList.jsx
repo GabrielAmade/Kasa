@@ -11,7 +11,6 @@ function ApartmentList() {
         const response = await fetch('data_base.json');
         const data = await response.json();
         setApartments(data);
-        console.log(data);
       } catch (error) {
         console.log(error);
       }

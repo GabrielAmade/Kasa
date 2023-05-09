@@ -4,10 +4,10 @@ import Banner from './components/banner/Banner'
 import ApartmentList from './components/apartment/ApartmentList'
 
 
-function App() {
+function App(props) {
   return (
     <div>
-      <Banner />
+      <Banner text="Chez vous, partout et ailleurs" />
       <ApartmentList/>
     </div>
   )
