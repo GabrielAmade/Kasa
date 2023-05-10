@@ -8,7 +8,8 @@ function ApartmentList() {
   useEffect(() => {
     async function fetchApartments() {
       try {
-        const response = await fetch('data_base.json');
+        const response = await fetch(`${process.env.PUBLIC_URL}/data_base.json`);
+        // console.log(response);
         const data = await response.json();
         setApartments(data);
       } catch (error) {
