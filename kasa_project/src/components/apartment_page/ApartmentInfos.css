@@ -22,16 +22,15 @@
     text-align: right;
 }
 
-.apartment_owner_badge {
+.apartment_owner_badge img {
     width: 64px;
     height: 64px;
-    border-radius: 50%;
-    background: #C4C4C4;
-    
+    border-radius: 50%;    
 }
 
 .apartment_owner_stars {
     font-size: 2rem;
+    color: #C4C4C4;
 }
 
 .apartment_owner_stars > span {
@@ -42,9 +41,9 @@
     color: #ff6060;
 }
 
-.apartment_owner_stars > .inactive {
+/* .apartment_owner_stars > .inactive {
     color: #C4C4C4;
-}
+} */
 
 
 .apartment_page h1 {

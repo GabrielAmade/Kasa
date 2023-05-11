@@ -13,7 +13,7 @@ function ApartmentPage() {
 
   const { id } = useParams()
 
-  console.log("apartment id :" + JSON.stringify(id));
+  // console.log("apartment id :" + JSON.stringify(id));
   const [selectedApartment, setselectedApartment] = useState(null);
 
 
@@ -31,16 +31,39 @@ function ApartmentPage() {
     fetchData();
 }, [id, selectedApartment]);
 
+if(selectedApartment === null){
+  return <div>Loading...</div>
+}
+
+const [firstname, lastname] = selectedApartment.host.name.split(' ')
 
 
   return (
     <div className='apartment_page'>
-        <p>selected flat : {JSON.stringify(selectedApartment)}</p>
-        <ApartmentBanner />
-        <ApartmentInfos />
+        {/* <p>selected flat : {JSON.stringify(selectedApartment)}</p> */}
+        <ApartmentBanner 
+          imageUrl = {selectedApartment.cover} />
+        <ApartmentInfos 
+          title={selectedApartment.title} 
+          location={selectedApartment.location} 
+          tags={selectedApartment.tags}
+          firstname={firstname}
+          lastname={lastname}
+          picture={selectedApartment.host.picture}
+          rating={selectedApartment.rating}
+          />
         <div className='apartment_description_block'>
-            <DescriptionContainer/>
-            <DescriptionContainer/>
+            <DescriptionContainer
+                title="Description"
+                content={selectedApartment.description}
+
+            />
+            <DescriptionContainer 
+                title="Equipements"
+                content={selectedApartment.equipments.map(equipment => <ul><li>{equipment}</li></ul>)}
+
+              
+            />
         </div>
 
     </div>
