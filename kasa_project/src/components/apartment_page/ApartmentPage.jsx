@@ -42,7 +42,7 @@ const [firstname, lastname] = selectedApartment.host.name.split(' ')
     <div className='apartment_page'>
         {/* <p>selected flat : {JSON.stringify(selectedApartment)}</p> */}
         <ApartmentBanner 
-          imageUrl = {selectedApartment.cover} />
+          pictures = {selectedApartment.pictures} />
         <ApartmentInfos 
           title={selectedApartment.title} 
           location={selectedApartment.location} 
