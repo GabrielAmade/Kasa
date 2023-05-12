@@ -28,14 +28,14 @@
     padding: 0 100px;
 }
 
-.navbar_logo > img {
+.logo {
     width: 200px;
 }
 
 @media (max-width: 768px){
 
-    .navbar_logo > img {
-        width: 145px;
+    .logo {
+        width: 130px;
     }
 
     .navbar_menu > a {

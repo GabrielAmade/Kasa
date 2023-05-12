@@ -1,7 +1,7 @@
 .apartment_page {
     color: #ff6060;
     width: 90vw;
-    margin: 0 auto;   
+    margin: 0 auto 200px;   
    
 }
 
@@ -11,6 +11,14 @@
     justify-content: space-between;
     gap: 2rem;
 
+}
+
+@media (max-width: 768px) {
+    .apartment_description_block {
+        flex-direction: column;
+        gap: 0
+
+    }
 }
 
 

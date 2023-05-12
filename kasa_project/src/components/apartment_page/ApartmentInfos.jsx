@@ -14,7 +14,7 @@ function ApartmentInfos(props) {
                 <h1 className='apartment_page_title'>{props.title}</h1>
                 <h2 className='apartment_page_subtitle'>{props.location}</h2>
                 <div className='apartment_filter'>
-                    {props.tags.map((tag) => (<span>{tag}</span>))}    
+                    {props.tags.map((tag) => (<p>{tag}</p>))}    
                 </div>
             </div>
             <div className='apartment_owner'>

@@ -2,27 +2,32 @@
     margin-block: 20px;
     width: 100%;
     overflow: hidden;
+
 }
 
 .description_content {
     background-color: #F6F6F6;
+    margin: 0;
+    padding: 30px 20px;
     border-radius: 0 0 10px 10px;
     position: relative;
     top: -15px;
     z-index: -1;
-    animation: slide-in 0.3s ease-in-out;
+    animation: slide-in 0.5s ease-in-out;
+    
 }
 
 @keyframes slide-in {
     0% {
         transform: translateY(-100%);
     }
-    
 }
 
-.description > p{
-    margin: 0;
-    padding: 30px 20px;
+.description_content > ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 6px;
+    line-height: 5px;
 }
 
 .description_title {

@@ -6,11 +6,16 @@
 
 .apartment_img > img {
     width: 100%;
+    border-radius: 10px;
+    max-height: 410px;
+    object-fit: cover;
+
+
 }
 
 @media (max-width: 768px) {
     .apartment_img > img {
-        height: 70vh;
+        min-height: 255px;
         object-fit: cover;
         border-radius: 10px;
     }

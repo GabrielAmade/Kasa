@@ -14,7 +14,7 @@ function DescriptionContainer(props) {
             <p>{props.title}</p>
             <span><i className="fa-solid fa-chevron-up chevron" onClick={showContent}></i></span>
         </div>
-        {isContentVisible && <p className='description_content'>{props.content}</p>}
+        {isContentVisible && <div className='description_content'>{props.content}</div>}
     </div>
   )
 }
