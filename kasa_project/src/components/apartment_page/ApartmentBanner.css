@@ -1,10 +1,7 @@
 .apartment_img {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     margin-bottom: 2rem;
     position: relative;
-    height: 25rem;
+    height: 410px;
     
   }
 
@@ -12,7 +9,7 @@
     width: 100%;
     inset: 0;
     border-radius: 10px;
-    max-height: 410px;
+    height: 410px;
     object-fit: cover;
     position: absolute;
     opacity: 0;
@@ -24,13 +21,12 @@
 }
 
 .button_container {
-    position: absolute;
-    top: 40%;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-  }
+  position: absolute;
+  top: 40%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
   
   .btn {
     border: none;
@@ -58,14 +54,14 @@
 @media (max-width: 768px) {
 
     .apartment_img {
-        height: 255px;
-      }
+      height: 255px;
+    }
 
     .apartment_img > img {
-        /* min-height: 255px; */
-        object-fit: cover;
-        border-radius: 10px;
+      height: 255px;
     }
+
+    
 
     .btn {
         font-size: 30px;

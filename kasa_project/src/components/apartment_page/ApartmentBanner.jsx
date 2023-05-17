@@ -28,10 +28,9 @@ function ApartmentBanner(props) {
  
 
   return (
-    <>
+    
       <div className='apartment_img'>
         {pictures.map((picture, index) => (<img key={picture} src={picture} alt="appartement" className={getClassName(index)}/>))}
-      </div>
       {pictures.length > 1 && (
         <div className="button_container">
           <button className='btn-previous btn' onClick={moveToPrevious}>
@@ -42,7 +41,7 @@ function ApartmentBanner(props) {
           </button>
         </div>
       )}
-    </>
+      </div>
   )
 }
 
