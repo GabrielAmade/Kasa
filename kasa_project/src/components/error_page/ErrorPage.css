@@ -13,9 +13,21 @@
     margin-bottom: 150px;
 }
 
-
 .linkHome {
     color: #ff6060; 
     text-decoration: none;
 }
 
+@media (max-width: 768px) {
+    .errorPage h1 {
+        font-size: 98px;
+        margin: 45px 0 10px;
+    }
+
+    .errorPage h2 {
+        width: 225px;
+        font-size: 18px;
+        margin-inline: auto;
+
+    }
+}

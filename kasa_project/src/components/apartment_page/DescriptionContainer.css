@@ -14,7 +14,6 @@
     top: -15px;
     z-index: -1;
     animation: slide-in 0.5s ease-in-out;
-    
 }
 
 @keyframes slide-in {
@@ -25,13 +24,13 @@
 
 @keyframes slide-out {
     100% {
-      transform: translateY(-100%);
+        transform: translateY(-100%);
     }
-  }
+}
 
 
 .rotate {
-    transform: rotate(180deg); /* Rotation à 180 degrés */
+    transform: rotate(180deg); 
 }
 
 .description_content > ul {
@@ -59,12 +58,14 @@
 
 
 
+
+
 @media (max-width: 768px) {
-    .apartmentDescrptionBlock {
+    /* .apartmentDescrptionBlock {
         flex-direction: column;
         gap: 3rem;
         margin-bottom: 2rem;
-    }
+    } */
 
     .description > p{
         font-size: 12px;

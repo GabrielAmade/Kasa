@@ -1,39 +1,34 @@
 import React, { useEffect, useState } from 'react';
-import DescriptionContainer from './DescriptionContainer'
-import "./ApartmentPage.css"
-import ApartmentBanner from './ApartmentBanner'
-import ApartmentInfos from './ApartmentInfos'
-import { useParams } from 'react-router-dom'
-
-
-
+import DescriptionContainer from './DescriptionContainer';
+import './ApartmentPage.css';
+import ApartmentBanner from './ApartmentBanner';
+import ApartmentInfos from './ApartmentInfos';
+import { useParams, useNavigate } from 'react-router-dom';
 
 function ApartmentPage() {
+  const { id } = useParams();
+  const navigate = useNavigate();
 
-
-  const { id } = useParams()
-
-  // console.log("apartment id :" + JSON.stringify(id));
   const [selectedApartment, setselectedApartment] = useState(null);
-
 
   useEffect(() => {
     async function fetchData() {
       try {
         const response = await fetch(`${process.env.PUBLIC_URL}/data_base.json`);
         const data = await response.json();
-        const filterData = data.find(data => data.id === id)
-        setselectedApartment(filterData)
+        const filterData = data.find((data) => data.id === id);
+        setselectedApartment(filterData);
       } catch (error) {
         console.log(error);
       }
     }
     fetchData();
-}, [id, selectedApartment]);
+  }, [id]);
 
-if(selectedApartment === null){
-  return <div>Loading...</div>
-}
+  if (selectedApartment === null) {
+    navigate('/error'); 
+    return null; 
+  }
 
 const [firstname, lastname] = selectedApartment.host.name.split(' ')
 

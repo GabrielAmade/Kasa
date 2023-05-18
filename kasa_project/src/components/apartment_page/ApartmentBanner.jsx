@@ -30,17 +30,17 @@ function ApartmentBanner(props) {
   return (
     
       <div className='apartment_img'>
-        {pictures.map((picture, index) => (<img key={picture} src={picture} alt="appartement" className={getClassName(index)}/>))}
-      {pictures.length > 1 && (
-        <div className="button_container">
-          <button className='btn-previous btn' onClick={moveToPrevious}>
-            <i className='fa-solid fa-chevron-left'></i>
-          </button>
-          <button className='btn-next btn' onClick={moveToNext}>
-            <i className='fa-solid fa-chevron-right chevron_apartment'></i>
-          </button>
-        </div>
-      )}
+          {pictures.map((picture, index) => (<img key={picture} src={picture} alt="appartement" className={getClassName(index)}/>))}
+        {pictures.length > 1 && (
+          <div className="button_container">
+            <button className='btn-previous btn' onClick={moveToPrevious}>
+              <i className='fa-solid fa-chevron-left'></i>
+            </button>
+            <button className='btn-next btn' onClick={moveToNext}>
+              <i className='fa-solid fa-chevron-right chevron_apartment'></i>
+            </button>
+          </div>
+        )}
       </div>
   )
 }
