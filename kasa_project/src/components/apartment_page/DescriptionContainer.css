@@ -23,6 +23,17 @@
     }
 }
 
+@keyframes slide-out {
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+
+
+.rotate {
+    transform: rotate(180deg); /* Rotation à 180 degrés */
+}
+
 .description_content > ul {
     list-style: none;
     padding: 0;
