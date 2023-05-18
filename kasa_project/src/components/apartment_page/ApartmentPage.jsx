@@ -6,9 +6,9 @@ import ApartmentInfos from './ApartmentInfos';
 import { useParams, useNavigate } from 'react-router-dom';
 
 function ApartmentPage() {
+
   const { id } = useParams();
   const navigate = useNavigate();
-
   const [selectedApartment, setselectedApartment] = useState(null);
 
   useEffect(() => {
@@ -35,9 +35,9 @@ const [firstname, lastname] = selectedApartment.host.name.split(' ')
 
   return (
     <div className='apartment_page'>
-        {/* <p>selected flat : {JSON.stringify(selectedApartment)}</p> */}
         <ApartmentBanner 
-          pictures = {selectedApartment.pictures} />
+          pictures = {selectedApartment.pictures} 
+          />
         <ApartmentInfos 
           title={selectedApartment.title} 
           location={selectedApartment.location} 
@@ -47,20 +47,17 @@ const [firstname, lastname] = selectedApartment.host.name.split(' ')
           picture={selectedApartment.host.picture}
           rating={selectedApartment.rating}
           />
+
         <div className='apartment_description_block'>
             <DescriptionContainer
                 title="Description"
                 content={selectedApartment.description}
-
             />
             <DescriptionContainer 
                 title="Equipements"
-                content={selectedApartment.equipments.map(equipment => <ul><li>{equipment}</li></ul>)}
-
-              
+                content={selectedApartment.equipments.map(equipment => <ul><li>{equipment}</li></ul>)}        
             />
         </div>
-
     </div>
   )
 }

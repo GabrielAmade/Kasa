@@ -2,7 +2,6 @@
     margin-block: 20px;
     width: 100%;
     overflow: hidden;
-
 }
 
 .description_content {
@@ -27,7 +26,6 @@
         transform: translateY(-100%);
     }
 }
-
 
 .rotate {
     transform: rotate(180deg); 
@@ -54,10 +52,6 @@
     font-size: 25px;
     cursor: pointer;
 }
-
-
-
-
 
 
 @media (max-width: 768px) {

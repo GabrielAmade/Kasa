@@ -9,7 +9,6 @@ export default function Navbar(){
         <nav className="navbar">
             <div className="navbar_logo">
                 <Link to="/">
-                    {/* <img src="logo.png" alt="logo"/> */}
                     <img src={Logo} alt="logo" className="logo"/>
                 </Link>
             </div>

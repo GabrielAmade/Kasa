@@ -1,11 +1,10 @@
 .navbar {
-    display: flex;
-    max-width: 90vw;
-    justify-content: space-between;
-    align-items: center;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    /* padding: 0 2rem; */
+    max-width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: 30px auto;
 }
 
@@ -17,7 +16,6 @@
     font-size: 24px;
     color: #ff6060;
     text-decoration: none;
-
 }
 
 .navbar_menu > a:hover {
@@ -34,19 +32,19 @@
 
 @media (max-width: 768px){
 
-    .logo {
-        width: 130px;
-    }
-
     .navbar_menu > a {
         padding: 0 5px;
         text-transform: uppercase;
         font-size: 12px;
         font-weight: 400;
     }
-
+    
     .navbar_menu > a:first-child {
         padding: 0 10px;
+        
+    }
+    .logo {
+        width: 130px;
     }
 }
 

@@ -4,7 +4,6 @@ import "./ApartmentCard.css"
 
 function ApartmentCard(props) {
   
-  
   return (
     <div className='apartment_card'>
         <img src={props.imageUrl} alt="appartement" />

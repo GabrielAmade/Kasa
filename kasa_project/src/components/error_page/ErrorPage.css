@@ -25,9 +25,8 @@
     }
 
     .errorPage h2 {
-        width: 225px;
         font-size: 18px;
+        width: 225px;
         margin-inline: auto;
-
     }
 }

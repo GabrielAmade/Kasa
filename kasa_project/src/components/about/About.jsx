@@ -5,8 +5,6 @@ import Banner from '../banner/Banner'
 
 function About() {
 
-
-  
   return (
     <div>
       <Banner />

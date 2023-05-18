@@ -21,7 +21,6 @@ const HeaderFooterLayout = () => {
     );
   };
 
-
   const router = createBrowserRouter([
     {
       errorElement: <ErrorPage />,
@@ -46,6 +45,5 @@ const HeaderFooterLayout = () => {
       ],
     },
   ]);
-
 
   export default router;
