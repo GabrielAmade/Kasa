@@ -1,10 +1,10 @@
 import React from 'react'
-import "../src/App.css"
+import "../src/HomePage.css"
 import Banner from './components/banner/Banner'
-import ApartmentList from './components/apartment/ApartmentList'
+import ApartmentList from './components/apartment_list/ApartmentList'
 
 
-function App(props) {
+function HomePage(props) {
   return (
     <div>
       <Banner text="Chez vous, partout et ailleurs" />
@@ -13,4 +13,4 @@ function App(props) {
   )
 }
 
-export default App
+export default HomePage

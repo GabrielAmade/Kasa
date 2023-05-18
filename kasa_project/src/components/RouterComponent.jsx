@@ -3,12 +3,12 @@ import {
   createBrowserRouter,
   Outlet
 } from 'react-router-dom';
-import App from '../App.js';
+import HomePage from '../HomePage.js';
 import Navbar from './navbar/Navbar';
 import Footer from './footer/Footer';
 import ApartmentPage from './apartment_page/ApartmentPage';
 import ErrorPage from './error_page/ErrorPage';
-import About from './about/About';
+import About from './about_page/About';
 
 
 const HeaderFooterLayout = () => {
@@ -28,7 +28,7 @@ const HeaderFooterLayout = () => {
       children: [
         {
           path: '/',
-          element: <App />,
+          element: <HomePage />,
         },
         {
           path: '/apartment/:id',
