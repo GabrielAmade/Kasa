@@ -1,7 +1,7 @@
 import React from 'react'
 import "../src/HomePage.css"
 import Banner from './components/banner/Banner'
-import ApartmentList from './components/apartment_list/ApartmentList'
+import ApartmentList from './components/list/List'
 
 
 function HomePage(props) {

@@ -11,7 +11,6 @@ function ApartmentBanner(props) {
     return "";
   };
 
-
   const moveToNext = () => {
     setCurrentPicture((currentPicture + 1) % pictures.length)
   }

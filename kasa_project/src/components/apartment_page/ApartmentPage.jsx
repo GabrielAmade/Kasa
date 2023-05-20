@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import DescriptionContainer from './DescriptionContainer';
+import { useParams, useNavigate } from 'react-router-dom';
 import './ApartmentPage.css';
 import ApartmentBanner from './ApartmentBanner';
 import ApartmentInfos from './ApartmentInfos';
-import { useParams, useNavigate } from 'react-router-dom';
+import DescriptionContainer from './DescriptionContainer';
 
 function ApartmentPage() {
 
   const { id } = useParams();
   const navigate = useNavigate();
+
   const [selectedApartment, setselectedApartment] = useState(null);
 
   useEffect(() => {
