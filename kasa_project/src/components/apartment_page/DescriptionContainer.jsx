@@ -15,8 +15,6 @@ function DescriptionContainer(props) {
     setIsChevronRotated(false);
   };
 
-  
-
   return (
     <div className='description'>
       <div className='description_title'>

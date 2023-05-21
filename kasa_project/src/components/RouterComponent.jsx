@@ -10,7 +10,6 @@ import ApartmentPage from './apartment_page/ApartmentPage';
 import ErrorPage from './error_page/ErrorPage';
 import About from './about_page/About';
 
-
 const HeaderFooterLayout = () => {
     return (
       <>

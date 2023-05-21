@@ -24,8 +24,6 @@ function ApartmentBanner(props) {
     setCurrentPicture(currentPicture - 1)
   }
 
- 
-
   return (
     
       <div className='apartment_img'>
