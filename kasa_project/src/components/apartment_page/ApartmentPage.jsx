@@ -18,13 +18,20 @@ function ApartmentPage() {
         const response = await fetch(`${process.env.PUBLIC_URL}/data_base.json`);
         const data = await response.json();
         const filterData = data.find((data) => data.id === id);
-        setselectedApartment(filterData);
+        
+        if (filterData) {
+           setselectedApartment(filterData);
+        } else {
+          navigate('/error');
+          return null;
+        }
+  
       } catch (error) {
         console.log(error);
       }
     }
     fetchData();
-  }, [id]);
+  }, [id, navigate]);
 
   if (selectedApartment === null) {
     navigate('/error'); 
