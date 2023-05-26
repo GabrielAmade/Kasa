@@ -31,37 +31,37 @@ function ApartmentPage() {
     fetchData();
   }, [id, navigate]);
 
-  if (selectedApartment === null) {
-    navigate('/error');
-    return null;
-  }
 
-  const [firstname, lastname] = selectedApartment.host.name.split(' ');
+  const [firstname, lastname] = selectedApartment?.host?.name?.split(' ') || [];
 
   return (
     <div className='apartment_page'>
-      <ApartmentBanner pictures={selectedApartment.pictures} />
-      <ApartmentInfos
-        title={selectedApartment.title}
-        location={selectedApartment.location}
-        tags={selectedApartment.tags}
-        firstname={firstname}
-        lastname={lastname}
-        picture={selectedApartment.host.picture}
-        rating={selectedApartment.rating}
-      />
+      {selectedApartment && (
+        <>
+          <ApartmentBanner pictures={selectedApartment.pictures} />
+          <ApartmentInfos
+            title={selectedApartment.title}
+            location={selectedApartment.location}
+            tags={selectedApartment.tags}
+            firstname={firstname}
+            lastname={lastname}
+            picture={selectedApartment.host.picture}
+            rating={selectedApartment.rating}
+          />
 
-      <div className='apartment_description_block'>
-        <DescriptionContainer title='Description' content={selectedApartment.description} />
-        <DescriptionContainer
-          title='Equipements'
-          content={selectedApartment.equipments.map((equipment, index) => (
-            <ul key={index}>
-              <li>{equipment}</li>
-            </ul>
-          ))}
-        />
-      </div>
+          <div className='apartment_description_block'>
+            <DescriptionContainer title='Description' content={selectedApartment.description} />
+            <DescriptionContainer
+              title='Equipements'
+              content={Array.isArray(selectedApartment.equipments) ? selectedApartment.equipments.map((equipment, index) => (
+                <ul key={index}>
+                  <li>{equipment}</li>
+                </ul>
+              )) : null}
+            />
+          </div>
+        </>
+      )}
     </div>
   );
 }
