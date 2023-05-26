@@ -6,11 +6,10 @@ import ApartmentInfos from './ApartmentInfos';
 import DescriptionContainer from './DescriptionContainer';
 
 function ApartmentPage() {
-
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const [selectedApartment, setselectedApartment] = useState(null);
+  const [selectedApartment, setSelectedApartment] = useState(null);
 
   useEffect(() => {
     async function fetchData() {
@@ -18,14 +17,13 @@ function ApartmentPage() {
         const response = await fetch(`${process.env.PUBLIC_URL}/data_base.json`);
         const data = await response.json();
         const filterData = data.find((data) => data.id === id);
-        
+
         if (filterData) {
-           setselectedApartment(filterData);
+          setSelectedApartment(filterData);
         } else {
           navigate('/error');
           return null;
         }
-  
       } catch (error) {
         console.log(error);
       }
@@ -34,43 +32,38 @@ function ApartmentPage() {
   }, [id, navigate]);
 
   if (selectedApartment === null) {
-    navigate('/error'); 
-    return null; 
+    navigate('/error');
+    return null;
   }
 
-const [firstname, lastname] = selectedApartment.host.name.split(' ')
-
+  const [firstname, lastname] = selectedApartment.host.name.split(' ');
 
   return (
     <div className='apartment_page'>
-        <ApartmentBanner 
-          pictures = {selectedApartment.pictures} 
-          />
-        <ApartmentInfos 
-          title={selectedApartment.title} 
-          location={selectedApartment.location} 
-          tags={selectedApartment.tags}
-          firstname={firstname}
-          lastname={lastname}
-          picture={selectedApartment.host.picture}
-          rating={selectedApartment.rating}
-          />
+      <ApartmentBanner pictures={selectedApartment.pictures} />
+      <ApartmentInfos
+        title={selectedApartment.title}
+        location={selectedApartment.location}
+        tags={selectedApartment.tags}
+        firstname={firstname}
+        lastname={lastname}
+        picture={selectedApartment.host.picture}
+        rating={selectedApartment.rating}
+      />
 
-        <div className='apartment_description_block'>
-            <DescriptionContainer
-                title="Description"
-                content={selectedApartment.description}
-            />
-            <DescriptionContainer 
-                title="Equipements"
-                content={selectedApartment.equipments.map(equipment => <ul><li>{equipment}</li></ul>)}        
-            />
-        </div>
+      <div className='apartment_description_block'>
+        <DescriptionContainer title='Description' content={selectedApartment.description} />
+        <DescriptionContainer
+          title='Equipements'
+          content={selectedApartment.equipments.map((equipment, index) => (
+            <ul key={index}>
+              <li>{equipment}</li>
+            </ul>
+          ))}
+        />
+      </div>
     </div>
-  )
+  );
 }
 
-export default ApartmentPage
-
-
-
+export default ApartmentPage;
