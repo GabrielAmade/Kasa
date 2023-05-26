@@ -32,7 +32,12 @@ function ApartmentPage() {
   }, [id, navigate]);
 
 
-  const [firstname, lastname] = selectedApartment?.host?.name?.split(' ') || [];
+  let firstname = '';
+  let lastname = '';
+  
+  if (selectedApartment && selectedApartment.host && selectedApartment.host.name) {
+    [firstname, lastname] = selectedApartment.host.name.split(' ');
+  }
 
   return (
     <div className='apartment_page'>
