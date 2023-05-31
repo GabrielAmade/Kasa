@@ -2,12 +2,16 @@ import React from 'react'
 import DescriptionContainer from '../apartment_page/DescriptionContainer'
 import "./About.css"
 import Banner from '../banner/Banner'
+import AboutImg from "../../assets/about_img.png";
+
 
 function About() {
 
+
+
   return (
     <div>
-      <Banner />
+      <Banner imageUrl={AboutImg}/>
       <div className="about_container">
         <DescriptionContainer title="Fiabilité" content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes."/>
         <DescriptionContainer title="Respect" content="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme."/>

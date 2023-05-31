@@ -1,8 +1,8 @@
 .banner {
-    background-image: url("https://unsplash.it/800/200");
     min-height: 223px;
     width: 90%;
     background-size: cover;
+    background-position: center;
     color: white;
     margin: 0 auto 30px;
     border-radius: 20px;
